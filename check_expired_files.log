@@ -1,0 +1,1311 @@
+Options parsed: expired_only=false, min_size_gb=100
+Before for loop
+BASE_DIRS count=1 values=/work/vita
+LOG_FILES count=1 values=./expired_files.csv
+Entering function: base_dir=/work/vita, log_file=./expired_files.csv
+Scanning /work/vita (expired_only=false, min_size_gb=100) ...
+Finding all directories...
+Found 625 directories to check
+[1/625] Checking: /work/vita/parth
+  -> Size: 0GB
+[2/625] Checking: /work/vita/corbiere
+  -> Size: 0GB
+[3/625] Checking: /work/vita/corbiere/dartfish
+  -> Size: 0GB
+[4/625] Checking: /work/vita/rjiang
+  -> Skipped (timeout or error)
+[5/625] Checking: /work/vita/rjiang/datasets
+  -> Skipped (timeout or error)
+[6/625] Checking: /work/vita/rjiang/trainval_navsim_logs
+  -> Size: 13GB
+[7/625] Checking: /work/vita/rjiang/trainval_sensor_blobs
+  -> Skipped (timeout or error)
+[8/625] Checking: /work/vita/scenes
+  -> Size: 0GB
+[9/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base_with_zero
+  -> Size: 0GB
+[10/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base_with_zero/models
+  -> Size: 0GB
+[11/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base_with_zero/images
+  -> Size: 0GB
+[12/625] Checking: /work/vita/parsaeif
+  -> Size: 0GB
+[13/625] Checking: /work/vita/JTA_dataset
+  -> Size: 0GB
+[14/625] Checking: /work/vita/casademo
+  -> Size: 0GB
+[15/625] Checking: /work/vita/sadegh
+  -> Size: 0GB
+[16/625] Checking: /work/vita/PoseTrack21
+  -> Size: 0GB
+[17/625] Checking: /work/vita/PoseTrack21/author_predictions
+  -> Size: 0GB
+[18/625] Checking: /work/vita/PoseTrack21/posetrack_person_search
+  -> Size: 0GB
+[19/625] Checking: /work/vita/PoseTrack21/posetrack_data
+  -> Size: 0GB
+[20/625] Checking: /work/vita/PoseTrack21/posetrack_mot
+  -> Size: 0GB
+[21/625] Checking: /work/vita/PoseTrack21/reid
+  -> Size: 0GB
+[22/625] Checking: /work/vita/PoseTrack21/images
+  -> Size: 0GB
+[23/625] Checking: /work/vita/yang
+  -> Skipped (timeout or error)
+[24/625] Checking: /work/vita/yang/EqMotion_pose_tf_urban_13j
+  -> Size: 2GB
+[25/625] Checking: /work/vita/yang/trajnet++
+  -> Size: 4GB
+[26/625] Checking: /work/vita/yang/Autobots_trajnetpp_pose_add_noise
+  -> Size: 41GB
+[27/625] Checking: /work/vita/yang/Trajectory-Transformer
+  -> Size: 4GB
+[28/625] Checking: /work/vita/yang/EqMotion_pose_tf_jrdb_33j
+  -> Size: 1GB
+[29/625] Checking: /work/vita/yang/h36m_deposit_data
+  -> Size: 0GB
+[30/625] Checking: /work/vita/yang/urban_cyclists_trajnetpp
+  -> Size: 6GB
+[31/625] Checking: /work/vita/yang/jta_trajnetpp
+  -> Size: 43GB
+[32/625] Checking: /work/vita/yang/DePOSit
+  -> Size: 0GB
+[33/625] Checking: /work/vita/yang/EqMotion_official
+  -> Size: 0GB
+[34/625] Checking: /work/vita/yang/autobots_urban
+  -> Size: 0GB
+[35/625] Checking: /work/vita/yang/trajnetpp_dataset_unimotion
+  -> Size: 4GB
+[36/625] Checking: /work/vita/yang/trajnetpp_dataset_18j
+  -> Size: 0GB
+[37/625] Checking: /work/vita/yang/AMASS_3DPW
+  -> Size: 2GB
+[38/625] Checking: /work/vita/yang/Autobots_trajnetpp_git
+  -> Size: 39GB
+[39/625] Checking: /work/vita/yang/TrajSDE
+  -> Size: 0GB
+[40/625] Checking: /work/vita/yang/social_pose_navigation
+  -> Size: 0GB
+[41/625] Checking: /work/vita/yang/BeLFusion
+  -> Size: 0GB
+[42/625] Checking: /work/vita/yang/trajnetpp_dataset_22j
+  -> Size: 0GB
+[43/625] Checking: /work/vita/yang/Multi_Transmotion
+  -> Size: 42GB
+[44/625] Checking: /work/vita/yang/multi_transmotion
+  -> Size: 0GB
+[45/625] Checking: /work/vita/yang/__MACOSX
+  -> Size: 0GB
+[46/625] Checking: /work/vita/yang/EqMotion
+  -> Size: 7GB
+[47/625] Checking: /work/vita/yang/trajdata
+  -> Size: 0GB
+[48/625] Checking: /work/vita/yang/swiss_ai
+  -> Size: 2GB
+[49/625] Checking: /work/vita/yang/social-transmotion-official
+  -> Size: 1GB
+[50/625] Checking: /work/vita/yang/Autobots_trajnetpp_pose_jrdb_33j
+  -> Size: 0GB
+[51/625] Checking: /work/vita/yang/EqMotion_pose_tf_full
+  -> Size: 1GB
+[52/625] Checking: /work/vita/yang/trajnetpp_dataset_UniHuMotion
+  -> Size: 49GB
+[53/625] Checking: /work/vita/yang/social_transmotion_22j
+  -> Size: 0GB
+[54/625] Checking: /work/vita/yang/EqMotion_pose_tf
+  -> Size: 1GB
+[55/625] Checking: /work/vita/yang/unitraj_transmotion
+  -> Skipped (timeout or error)
+[56/625] Checking: /work/vita/yang/trajnetpp_dataset_33j
+  -> Size: 0GB
+[57/625] Checking: /work/vita/yang/venvs
+  -> Skipped (timeout or error)
+[58/625] Checking: /work/vita/yang/mysocial-pose
+  -> Size: 37GB
+[59/625] Checking: /work/vita/yang/workstation
+  -> Skipped (timeout or error)
+[60/625] Checking: /work/vita/yang/trajnetpp_dataset_17j_2d
+  -> Size: 0GB
+[61/625] Checking: /work/vita/yang/EqMotion_pose_mlp
+  -> Size: 1GB
+[62/625] Checking: /work/vita/yang/lan_code
+  -> Size: 11GB
+[63/625] Checking: /work/vita/yang/corl_orca
+  -> Size: 0GB
+[64/625] Checking: /work/vita/yang/temp_imagenet
+  -> Size: 148GB
+  ✓ MATCH! Added to CSV
+[65/625] Checking: /work/vita/yang/Trajectron-plus-plus
+  -> Size: 0GB
+[66/625] Checking: /work/vita/yang/social-transmotion-official-urban-its
+  -> Size: 1GB
+[67/625] Checking: /work/vita/yang/waymo
+  -> Size: 2GB
+[68/625] Checking: /work/vita/yang/runs
+  -> Size: 0GB
+[69/625] Checking: /work/vita/yang/Autobots_trajnetpp_pose
+  -> Size: 8GB
+[70/625] Checking: /work/vita/yang/omnitraj
+  -> Skipped (timeout or error)
+[71/625] Checking: /work/vita/yang/DePOSit_private
+  -> Size: 0GB
+[72/625] Checking: /work/vita/yang/CoRL_beta
+  -> Skipped (timeout or error)
+[73/625] Checking: /work/vita/yang/social-transmotion_jta_dct_3d2dp
+  -> Size: 0GB
+[74/625] Checking: /work/vita/yang/proj
+  -> Size: 0GB
+[75/625] Checking: /work/vita/yang/conda
+  -> Skipped (timeout or error)
+[76/625] Checking: /work/vita/yang/social-transmotion-dct-17j
+  -> Size: 0GB
+[77/625] Checking: /work/vita/yang/conda_envs
+  -> Skipped (timeout or error)
+[78/625] Checking: /work/vita/datasets
+  -> Skipped (timeout or error)
+[79/625] Checking: /work/vita/datasets/AMASS_SMPLHG
+  -> Size: 25GB
+[80/625] Checking: /work/vita/datasets/audio
+  -> Skipped (timeout or error)
+[81/625] Checking: /work/vita/datasets/mnist
+  -> Size: 0GB
+[82/625] Checking: /work/vita/datasets/3RScan
+  -> Skipped (timeout or error)
+[83/625] Checking: /work/vita/datasets/.config
+  -> Size: 0GB
+[84/625] Checking: /work/vita/datasets/scenes
+  -> Size: 0GB
+[85/625] Checking: /work/vita/datasets/megadepth_aerial_data
+  -> Skipped (timeout or error)
+[86/625] Checking: /work/vita/datasets/h3.6
+  -> Skipped (timeout or error)
+[87/625] Checking: /work/vita/datasets/Scenarionet_Dataset
+  -> Skipped (timeout or error)
+[88/625] Checking: /work/vita/datasets/nturgb+d_skeletonsV1
+  -> Size: 5GB
+[89/625] Checking: /work/vita/datasets/SonicMasterDataset
+  -> Size: 0GB
+[90/625] Checking: /work/vita/datasets/datasets
+  -> Skipped (timeout or error)
+[91/625] Checking: /work/vita/datasets/nuplan
+  -> Size: 0GB
+[92/625] Checking: /work/vita/datasets/AMASS
+  -> Size: 20GB
+[93/625] Checking: /work/vita/datasets/dlav_2025
+  -> Size: 0GB
+[94/625] Checking: /work/vita/datasets/CULane
+  -> Skipped (timeout or error)
+[95/625] Checking: /work/vita/datasets/output_dir
+  -> Size: 0GB
+[96/625] Checking: /work/vita/datasets/mb-h36m-amass
+  -> Skipped (timeout or error)
+[97/625] Checking: /work/vita/datasets/data-coco
+  -> Skipped (timeout or error)
+[98/625] Checking: /work/vita/datasets/ywangpa2
+  -> Size: 0GB
+[99/625] Checking: /work/vita/datasets/zod_crossview_processed_100m
+  -> Skipped (timeout or error)
+[100/625] Checking: /work/vita/datasets/animalpose
+  -> Size: 2GB
+[101/625] Checking: /work/vita/datasets/external_sounds
+  -> Size: 0GB
+[102/625] Checking: /work/vita/datasets/.nv
+  -> Size: 0GB
+[103/625] Checking: /work/vita/datasets/train
+  -> Size: 138GB
+  ✓ MATCH! Added to CSV
+[104/625] Checking: /work/vita/datasets/nturgb+d_skeletonsV2
+  -> Size: 0GB
+[105/625] Checking: /work/vita/datasets/animal_keypoint_datasets
+  -> Skipped (timeout or error)
+[106/625] Checking: /work/vita/datasets/stanford-rbd-dataset
+  -> Size: 2308GB
+  ✓ MATCH! Added to CSV
+[107/625] Checking: /work/vita/datasets/uniplan_ckpt_temp_yang
+  -> Size: 0GB
+[108/625] Checking: /work/vita/datasets/Inter-
+  -> Skipped (timeout or error)
+[109/625] Checking: /work/vita/datasets/nturgb+d_skeletons
+  -> Size: 0GB
+[110/625] Checking: /work/vita/datasets/imagenet128
+  -> Skipped (timeout or error)
+[111/625] Checking: /work/vita/datasets/rbd_clips
+  -> Size: 2GB
+[112/625] Checking: /work/vita/datasets/VIGOR
+  -> Size: 0GB
+[113/625] Checking: /work/vita/datasets/Tusimple
+  -> Size: 21GB
+[114/625] Checking: /work/vita/datasets/sonic_master
+  -> Size: 0GB
+[115/625] Checking: /work/vita/datasets/PandaSet
+  -> Size: 0GB
+[116/625] Checking: /work/vita/datasets/gta5
+  -> Size: 56GB
+[117/625] Checking: /work/vita/datasets/TrafficGenome
+  -> Size: 3GB
+[118/625] Checking: /work/vita/datasets/Talk2Car
+  -> Size: 0GB
+[119/625] Checking: /work/vita/datasets/waymo110
+  -> Skipped (timeout or error)
+[120/625] Checking: /work/vita/datasets/ReMocap
+  -> Size: 3GB
+[121/625] Checking: /work/vita/datasets/cars196
+  -> Size: 1GB
+[122/625] Checking: /work/vita/datasets/NTU
+  -> Skipped (timeout or error)
+[123/625] Checking: /work/vita/datasets/test_vehicle_causality
+  -> Skipped (timeout or error)
+[124/625] Checking: /work/vita/datasets/cifar-10-batches-py
+  -> Size: 0GB
+[125/625] Checking: /work/vita/datasets/Okutama-Swiss-dataset
+  -> Size: 3GB
+[126/625] Checking: /work/vita/datasets/.cupy
+  -> Size: 0GB
+[127/625] Checking: /work/vita/datasets/Oxford_5m_sampling
+  -> Skipped (timeout or error)
+[128/625] Checking: /work/vita/datasets/old_clips_data
+  -> Size: 22GB
+[129/625] Checking: /work/vita/datasets/waymo_e2e
+  -> Size: 1533GB
+  ✓ MATCH! Added to CSV
+[130/625] Checking: /work/vita/datasets/NUSCENES
+  -> Size: 0GB
+[131/625] Checking: /work/vita/datasets/nuscenes
+  -> Size: 346GB
+  ✓ MATCH! Added to CSV
+[132/625] Checking: /work/vita/datasets/cityscapes_full
+  -> Size: 401GB
+  ✓ MATCH! Added to CSV
+[133/625] Checking: /work/vita/datasets/ReMoS
+  -> Size: 0GB
+[134/625] Checking: /work/vita/datasets/HoliCity
+  -> Size: 125GB
+  ✓ MATCH! Added to CSV
+[135/625] Checking: /work/vita/datasets/CUB_200_2011
+  -> Size: 0GB
+[136/625] Checking: /work/vita/datasets/AMASS_SMPLHG_tar
+  -> Size: 9GB
+[137/625] Checking: /work/vita/datasets/ffhq
+  -> Size: 89GB
+[138/625] Checking: /work/vita/datasets/zod
+  -> Skipped (timeout or error)
+[139/625] Checking: /work/vita/datasets/CVACT
+  -> Skipped (timeout or error)
+[140/625] Checking: /work/vita/datasets/interaction
+  -> Size: 0GB
+[141/625] Checking: /work/vita/datasets/cifar10_c
+  -> Size: 2GB
+[142/625] Checking: /work/vita/datasets/BDD-X-Dataset
+  -> Size: 0GB
+[143/625] Checking: /work/vita/datasets/helvipad_raw
+  -> Size: 0GB
+[144/625] Checking: /work/vita/datasets/dlav_2025_v2
+  -> Size: 4GB
+[145/625] Checking: /work/vita/datasets/Level5_WP
+  -> Size: 8GB
+[146/625] Checking: /work/vita/datasets/val
+  -> Size: 0GB
+[147/625] Checking: /work/vita/datasets/VIGOR_depth
+  -> Skipped (timeout or error)
+[148/625] Checking: /work/vita/datasets/PKUMMDv1
+  -> Size: 7GB
+[149/625] Checking: /work/vita/datasets/OpenDriveLab___OpenLane
+  -> Skipped (timeout or error)
+[150/625] Checking: /work/vita/datasets/CK+
+  -> Size: 0GB
+[151/625] Checking: /work/vita/datasets/traffic-data
+  -> Size: 0GB
+[152/625] Checking: /work/vita/datasets/triplet
+  -> Skipped (timeout or error)
+[153/625] Checking: /work/vita/datasets/cifar10
+  -> Size: 0GB
+[154/625] Checking: /work/vita/datasets/ntudataset2
+  -> Size: 10GB
+[155/625] Checking: /work/vita/datasets/wholebody_annotations
+  -> Size: 0GB
+[156/625] Checking: /work/vita/datasets/CASR
+  -> Size: 0GB
+[157/625] Checking: /work/vita/datasets/h3.6m_3d_walk_related_trajnetpp
+  -> Size: 0GB
+[158/625] Checking: /work/vita/datasets/KITTI
+  -> Skipped (timeout or error)
+[159/625] Checking: /work/vita/datasets/officehome
+  -> Size: 0GB
+[160/625] Checking: /work/vita/datasets/UAV-benchmark-M
+  -> Size: 0GB
+[161/625] Checking: /work/vita/datasets/nuplan_root
+  -> Skipped (timeout or error)
+[162/625] Checking: /work/vita/datasets/semantic_drone_dataset
+  -> Size: 0GB
+[163/625] Checking: /work/vita/datasets/Aff-Wild2
+  -> Size: 0GB
+[164/625] Checking: /work/vita/datasets/ILSVRC
+  -> Size: 0GB
+[165/625] Checking: /work/vita/datasets/PKUMMDv2
+  -> Size: 1GB
+[166/625] Checking: /work/vita/datasets/stereo_dataset
+  -> Size: 0GB
+[167/625] Checking: /work/vita/datasets/waymo
+  -> Size: 0GB
+[168/625] Checking: /work/vita/datasets/nuscenes_h5
+  -> Size: 66GB
+[169/625] Checking: /work/vita/datasets/3DPW
+  -> Size: 5GB
+[170/625] Checking: /work/vita/datasets/JTA
+  -> Size: 1GB
+[171/625] Checking: /work/vita/datasets/LSUN
+  -> Size: 0GB
+[172/625] Checking: /work/vita/datasets/JRDB2022
+  -> Skipped (timeout or error)
+[173/625] Checking: /work/vita/datasets/navisim_dataset
+  -> Size: 0GB
+[174/625] Checking: /work/vita/datasets/maestro-v3.0.0
+  -> Skipped (timeout or error)
+[175/625] Checking: /work/vita/datasets/megadepth
+  -> Skipped (timeout or error)
+[176/625] Checking: /work/vita/datasets/hmdb51
+  -> Size: 0GB
+[177/625] Checking: /work/vita/datasets/ArticCentury
+  -> Size: 0GB
+[178/625] Checking: /work/vita/datasets/MOTChallenge
+  -> Size: 0GB
+[179/625] Checking: /work/vita/datasets/kinetics
+  -> Skipped (timeout or error)
+[180/625] Checking: /work/vita/datasets/mtg-jamendo-dataset
+  -> Size: 2241GB
+  ✓ MATCH! Added to CSV
+[181/625] Checking: /work/vita/datasets/UTKFace
+  -> Size: 0GB
+[182/625] Checking: /work/vita/datasets/nba
+  -> Size: 49GB
+[183/625] Checking: /work/vita/datasets/vehicle_causality
+  -> Skipped (timeout or error)
+[184/625] Checking: /work/vita/datasets/Stereo360
+  -> Size: 115GB
+  ✓ MATCH! Added to CSV
+[185/625] Checking: /work/vita/datasets/moralMachine_datasets
+  -> Size: 4GB
+[186/625] Checking: /work/vita/datasets/ffhq-dataset
+  -> Size: 0GB
+[187/625] Checking: /work/vita/datasets/wayformer
+  -> Size: 1655GB
+  ✓ MATCH! Added to CSV
+[188/625] Checking: /work/vita/datasets/.cache
+  -> Size: 0GB
+[189/625] Checking: /work/vita/datasets/PersonPath22
+  -> Size: 0GB
+[190/625] Checking: /work/vita/datasets/OpenDV-YouTube
+  -> Size: 213GB
+  ✓ MATCH! Added to CSV
+[191/625] Checking: /work/vita/datasets/imagenet
+  -> Skipped (timeout or error)
+[192/625] Checking: /work/vita/datasets/waterbirds
+  -> Size: 0GB
+[193/625] Checking: /work/vita/datasets/domainbed
+  -> Size: 0GB
+[194/625] Checking: /work/vita/datasets/MIT_moralMachine
+  -> Size: 1GB
+[195/625] Checking: /work/vita/datasets/cvgl
+  -> Size: 0GB
+[196/625] Checking: /work/vita/LayerSync
+  -> Size: 9GB
+[197/625] Checking: /work/vita/pegah
+  -> Size: 0GB
+[198/625] Checking: /work/vita/tzhang
+  -> Size: 0GB
+[199/625] Checking: /work/vita/ahmad
+  -> Size: 0GB
+[200/625] Checking: /work/vita/megh
+  -> Size: 0GB
+[201/625] Checking: /work/vita/megh/lspet
+  -> Size: 0GB
+[202/625] Checking: /work/vita/megh/mpii
+  -> Size: 0GB
+[203/625] Checking: /work/vita/megh/lsp
+  -> Size: 0GB
+[204/625] Checking: /work/vita/data-posetrack2017
+  -> Size: 0GB
+[205/625] Checking: /work/vita/mordan
+  -> Size: 0GB
+[206/625] Checking: /work/vita/mordan/LOOK
+  -> Size: 0GB
+[207/625] Checking: /work/vita/mordan/Models_Dartfish
+  -> Size: 0GB
+[208/625] Checking: /work/vita/mordan/venvs
+  -> Size: 0GB
+[209/625] Checking: /work/vita/mordan/Documents
+  -> Size: 0GB
+[210/625] Checking: /work/vita/.vscode
+  -> Size: 0GB
+[211/625] Checking: /work/vita/nicolas
+  -> Skipped (timeout or error)
+[212/625] Checking: /work/vita/nicolas/Patients_with_40_clips
+  -> Size: 21GB
+[213/625] Checking: /work/vita/nicolas/ALL_MOVEMENT_CLIPS
+  -> Size: 341GB
+  ✓ MATCH! Added to CSV
+[214/625] Checking: /work/vita/nicolas/OF_LABELED_CLIPS
+  -> Size: 5GB
+[215/625] Checking: /work/vita/nicolas/OF_MAGNITUDES
+  -> Size: 1GB
+[216/625] Checking: /work/vita/nicolas/CORRECTED_CLIPS
+  -> Size: 11GB
+[217/625] Checking: /work/vita/nicolas/OF_OUTPUTS
+  -> Skipped (timeout or error)
+[218/625] Checking: /work/vita/posepred
+  -> Size: 0GB
+[219/625] Checking: /work/vita/apolloscape
+  -> Size: 0GB
+[220/625] Checking: /work/vita/olaf
+  -> Size: 0GB
+[221/625] Checking: /work/vita/data-coco
+  -> Skipped (timeout or error)
+[222/625] Checking: /work/vita/data-coco/annotations
+  -> Size: 0GB
+[223/625] Checking: /work/vita/data-coco/images
+  -> Size: 32GB
+[224/625] Checking: /work/vita/data-coco/animals
+  -> Size: 2GB
+[225/625] Checking: /work/vita/hossein
+  -> Size: 0GB
+[226/625] Checking: /work/vita/hossein/temp
+  -> Size: 0GB
+[227/625] Checking: /work/vita/nie
+  -> Skipped (timeout or error)
+[228/625] Checking: /work/vita/nie/exploration
+  -> Size: 3GB
+[229/625] Checking: /work/vita/nie/logs
+  -> Size: 0GB
+[230/625] Checking: /work/vita/nie/.config
+  -> Size: 0GB
+[231/625] Checking: /work/vita/nie/tmp
+  -> Size: 0GB
+[232/625] Checking: /work/vita/nie/.local
+  -> Size: 0GB
+[233/625] Checking: /work/vita/nie/TSDS
+  -> Size: 0GB
+[234/625] Checking: /work/vita/nie/SEA
+  -> Size: 275GB
+  ✓ MATCH! Added to CSV
+[235/625] Checking: /work/vita/nie/LESS
+  -> Size: 2GB
+[236/625] Checking: /work/vita/nie/selected_data
+  -> Size: 1677GB
+  ✓ MATCH! Added to CSV
+[237/625] Checking: /work/vita/nie/RLAIF-debias
+  -> Size: 52GB
+[238/625] Checking: /work/vita/nie/many-shot
+  -> Size: 0GB
+[239/625] Checking: /work/vita/nie/.nv
+  -> Size: 0GB
+[240/625] Checking: /work/vita/nie/cache
+  -> Size: 915GB
+  ✓ MATCH! Added to CSV
+[241/625] Checking: /work/vita/nie/hw3
+  -> Size: 0GB
+[242/625] Checking: /work/vita/nie/alpaca_eval_results
+  -> Size: 0GB
+[243/625] Checking: /work/vita/nie/models
+  -> Size: 0GB
+[244/625] Checking: /work/vita/nie/trak_results
+  -> Size: 35GB
+[245/625] Checking: /work/vita/nie/fact-test
+  -> Size: 4GB
+[246/625] Checking: /work/vita/nie/FactTest
+  -> Size: 0GB
+[247/625] Checking: /work/vita/nie/open-o3
+  -> Skipped (timeout or error)
+[248/625] Checking: /work/vita/nie/trak
+  -> Size: 502GB
+  ✓ MATCH! Added to CSV
+[249/625] Checking: /work/vita/nie/out
+  -> Size: 2499GB
+  ✓ MATCH! Added to CSV
+[250/625] Checking: /work/vita/nie/gridmatic
+  -> Size: 0GB
+[251/625] Checking: /work/vita/nie/overtraining
+  -> Size: 3875GB
+  ✓ MATCH! Added to CSV
+[252/625] Checking: /work/vita/nie/ut-dev
+  -> Size: 32GB
+[253/625] Checking: /work/vita/nie/verl
+  -> Size: 255GB
+  ✓ MATCH! Added to CSV
+[254/625] Checking: /work/vita/nie/UniTraj
+  -> Size: 475GB
+  ✓ MATCH! Added to CSV
+[255/625] Checking: /work/vita/nie/output_models
+  -> Size: 3443GB
+  ✓ MATCH! Added to CSV
+[256/625] Checking: /work/vita/nie/training_data
+  -> Size: 2GB
+[257/625] Checking: /work/vita/nie/.triton
+  -> Size: 0GB
+[258/625] Checking: /work/vita/nie/masr
+  -> Size: 0GB
+[259/625] Checking: /work/vita/nie/data
+  -> Size: 0GB
+[260/625] Checking: /work/vita/nie/.apptainer
+  -> Size: 0GB
+[261/625] Checking: /work/vita/nie/conda
+  -> Skipped (timeout or error)
+[262/625] Checking: /work/vita/nie/unitraj_ckpt
+  -> Size: 4GB
+[263/625] Checking: /work/vita/nie/.cache
+  -> Size: 0GB
+[264/625] Checking: /work/vita/nie/hw3_updated
+  -> Size: 0GB
+[265/625] Checking: /work/vita/nie/grads
+  -> Size: 648GB
+  ✓ MATCH! Added to CSV
+[266/625] Checking: /work/vita/nie/agent4sci
+  -> Skipped (timeout or error)
+[267/625] Checking: /work/vita/messaoud
+  -> Size: 256GB
+  ✓ MATCH! Added to CSV
+[268/625] Checking: /work/vita/messaoud/unitraj_mae_old
+  -> Size: 45GB
+[269/625] Checking: /work/vita/messaoud/unitraj_mae
+  -> Size: 48GB
+[270/625] Checking: /work/vita/messaoud/MultiAct
+  -> Size: 0GB
+[271/625] Checking: /work/vita/messaoud/UniTraj
+  -> Size: 162GB
+  ✓ MATCH! Added to CSV
+[272/625] Checking: /work/vita/dartfish
+  -> Size: 0GB
+[273/625] Checking: /work/vita/dartfish/models
+  -> Size: 0GB
+[274/625] Checking: /work/vita/dartfish/json_data
+  -> Size: 0GB
+[275/625] Checking: /work/vita/mehdi
+  -> Size: 0GB
+[276/625] Checking: /work/vita/yiwang
+  -> Skipped (timeout or error)
+[277/625] Checking: /work/vita/yiwang/outputs
+  -> Size: 0GB
+[278/625] Checking: /work/vita/yiwang/3RScan
+  -> Size: 0GB
+[279/625] Checking: /work/vita/yiwang/LATR
+  -> Size: 0GB
+[280/625] Checking: /work/vita/yiwang/tmp
+  -> Size: 3GB
+[281/625] Checking: /work/vita/yiwang/eval
+  -> Size: 0GB
+[282/625] Checking: /work/vita/yiwang/predictions
+  -> Size: 0GB
+[283/625] Checking: /work/vita/yiwang/venvs
+  -> Size: 0GB
+[284/625] Checking: /work/vita/yiwang/miniconda3
+  -> Skipped (timeout or error)
+[285/625] Checking: /work/vita/yiwang/.vscode-server
+  -> Size: 0GB
+[286/625] Checking: /work/vita/yasamin
+  -> Size: 367GB
+  ✓ MATCH! Added to CSV
+[287/625] Checking: /work/vita/yasamin/opp_output
+  -> Size: 10GB
+[288/625] Checking: /work/vita/yasamin/project
+  -> Size: 0GB
+[289/625] Checking: /work/vita/yasamin/opp_output_checkpoints
+  -> Size: 353GB
+  ✓ MATCH! Added to CSV
+[290/625] Checking: /work/vita/yasamin/images
+  -> Size: 1GB
+[291/625] Checking: /work/vita/yasamin/animals
+  -> Size: 2GB
+[292/625] Checking: /work/vita/danya
+  -> Size: 0GB
+[293/625] Checking: /work/vita/qngo
+  -> Skipped (timeout or error)
+[294/625] Checking: /work/vita/qngo/crossviewslam-check
+  -> Size: 69GB
+[295/625] Checking: /work/vita/qngo/home_save
+  -> Skipped (timeout or error)
+[296/625] Checking: /work/vita/qngo/osm_distance_test
+  -> Size: 0GB
+[297/625] Checking: /work/vita/qngo/test_results
+  -> Size: 788GB
+  ✓ MATCH! Added to CSV
+[298/625] Checking: /work/vita/qngo/qualitative
+  -> Size: 0GB
+[299/625] Checking: /work/vita/qngo/CrossViewSLAM
+  -> Size: 938GB
+  ✓ MATCH! Added to CSV
+[300/625] Checking: /work/vita/qngo/tmp
+  -> Size: 0GB
+[301/625] Checking: /work/vita/qngo/fusion_alphas
+  -> Size: 0GB
+[302/625] Checking: /work/vita/qngo/sat_distance
+  -> Size: 0GB
+[303/625] Checking: /work/vita/qngo/miniforge3
+  -> Skipped (timeout or error)
+[304/625] Checking: /work/vita/qngo/models
+  -> Size: 354GB
+  ✓ MATCH! Added to CSV
+[305/625] Checking: /work/vita/qngo/VIGOR
+  -> Skipped (timeout or error)
+[306/625] Checking: /work/vita/qngo/images
+  -> Size: 103GB
+  ✓ MATCH! Added to CSV
+[307/625] Checking: /work/vita/qngo/venvs
+  -> Skipped (timeout or error)
+[308/625] Checking: /work/vita/qngo/test
+  -> Size: 0GB
+[309/625] Checking: /work/vita/qngo/KITTI
+  -> Skipped (timeout or error)
+[310/625] Checking: /work/vita/qngo/osm_distance
+  -> Size: 0GB
+[311/625] Checking: /work/vita/qngo/dists
+  -> Size: 0GB
+[312/625] Checking: /work/vita/trajpred
+  -> Size: 158GB
+  ✓ MATCH! Added to CSV
+[313/625] Checking: /work/vita/trajpred/tes
+  -> Size: 0GB
+[314/625] Checking: /work/vita/trajpred/preprocessed
+  -> Size: 143GB
+  ✓ MATCH! Added to CSV
+[315/625] Checking: /work/vita/trajpred/autobot_original
+  -> Size: 14GB
+[316/625] Checking: /work/vita/trajpred/preproces
+  -> Size: 0GB
+[317/625] Checking: /work/vita/trajpred/autobot_exp
+  -> Size: 0GB
+[318/625] Checking: /work/vita/trajpred/res
+  -> Size: 0GB
+[319/625] Checking: /work/vita/trajpred/trained_models
+  -> Size: 0GB
+[320/625] Checking: /work/vita/escoyez
+  -> Size: 0GB
+[321/625] Checking: /work/vita/escoyez/checkpoints
+  -> Size: 0GB
+[322/625] Checking: /work/vita/trinca
+  -> Size: 0GB
+[323/625] Checking: /work/vita/clee
+  -> Size: 0GB
+[324/625] Checking: /work/vita/clee/Depth-Anything
+  -> Size: 0GB
+[325/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base
+  -> Size: 0GB
+[326/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base/models
+  -> Size: 0GB
+[327/625] Checking: /work/vita/cifar10_model_trained_on_eigen_base/images
+  -> Size: 0GB
+[328/625] Checking: /work/vita/sepehr
+  -> Size: 0GB
+[329/625] Checking: /work/vita/lazar
+  -> Size: 35GB
+[330/625] Checking: /work/vita/lazar/CARLA_Leaderboard_20
+  -> Size: 28GB
+[331/625] Checking: /work/vita/data-posetrack2018
+  -> Size: 0GB
+[332/625] Checking: /work/vita/TTS
+  -> Size: 0GB
+[333/625] Checking: /work/vita/nmuenger_trinca
+  -> Size: 0GB
+[334/625] Checking: /work/vita/nmuenger_trinca/annotations_reduced
+  -> Size: 0GB
+[335/625] Checking: /work/vita/nmuenger_trinca/annotations
+  -> Size: 0GB
+[336/625] Checking: /work/vita/nmuenger_trinca/background
+  -> Size: 0GB
+[337/625] Checking: /work/vita/nmuenger_trinca/defined_traffic_signs
+  -> Size: 0GB
+[338/625] Checking: /work/vita/StrajNet
+  -> Size: 0GB
+[339/625] Checking: /work/vita/StrajNet/venv
+  -> Size: 0GB
+[340/625] Checking: /work/vita/StrajNet/strajnet
+  -> Size: 0GB
+[341/625] Checking: /work/vita/ahmad_rh
+  -> Skipped (timeout or error)
+[342/625] Checking: /work/vita/ahmad_rh/synth_ood_30_40
+  -> Size: 9GB
+[343/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.noncausal_circle
+  -> Size: 2GB
+[344/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.3.1
+  -> Size: 3GB
+[345/625] Checking: /work/vita/ahmad_rh/synth_v1_ood.4.2
+  -> Size: 0GB
+[346/625] Checking: /work/vita/ahmad_rh/synth_v2_0.5
+  -> Size: 63GB
+[347/625] Checking: /work/vita/ahmad_rh/synth_v2_2
+  -> Size: 49GB
+[348/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.3.2
+  -> Size: 8GB
+[349/625] Checking: /work/vita/ahmad_rh/synth_v2_1.5
+  -> Size: 54GB
+[350/625] Checking: /work/vita/ahmad_rh/Autobot_ego_NScene:20000_regType:None_v2_0.5_bl_s1
+  -> Size: 0GB
+[351/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.walkway.2
+  -> Size: 8GB
+[352/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.noncausal_dense
+  -> Size: 12GB
+[353/625] Checking: /work/vita/ahmad_rh/ACEs
+  -> Size: 0GB
+[354/625] Checking: /work/vita/ahmad_rh/Autobot_ego_NScene:20000_regType:contrastive_CW:200_v2_0.5_ft_s1
+  -> Size: 0GB
+[355/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.1.1
+  -> Size: 3GB
+[356/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.noncausal_lf
+  -> Size: 2GB
+[357/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.1.2
+  -> Size: 8GB
+[358/625] Checking: /work/vita/ahmad_rh/synth_v2
+  -> Size: 54GB
+[359/625] Checking: /work/vita/ahmad_rh/synth_ood_18_25
+  -> Size: 33GB
+[360/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.2.1
+  -> Size: 3GB
+[361/625] Checking: /work/vita/ahmad_rh/eth_ucy
+  -> Size: 0GB
+[362/625] Checking: /work/vita/ahmad_rh/contrastive_v2_2
+  -> Size: 0GB
+[363/625] Checking: /work/vita/ahmad_rh/Autobot_ego_NScene:20000_regType:contrastive_CW:1000_v2_0.5_ft_s1
+  -> Size: 0GB
+[364/625] Checking: /work/vita/ahmad_rh/nuscenes_pgp
+  -> Size: 30GB
+[365/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.walkway.1
+  -> Size: 3GB
+[366/625] Checking: /work/vita/ahmad_rh/synth_v1_ood.4.3
+  -> Size: 4GB
+[367/625] Checking: /work/vita/ahmad_rh/synth_v2.ood.2.2
+  -> Size: 8GB
+[368/625] Checking: /work/vita/ahmad_rh/synth_v2_1
+  -> Size: 54GB
+[369/625] Checking: /work/vita/ahmad_rh/synth_ood_25_30
+  -> Size: 4GB
+[370/625] Checking: /work/vita/ahmad_rh/synth_ood_40_60
+  -> Size: 1GB
+[371/625] Checking: /work/vita/ahmad_rh/synth_data
+  -> Size: 44GB
+[372/625] Checking: /work/vita/ahmad_rh/Autobot_ego_NScene:20000_regType:contrastive_CW:50_v2_0.5_ft_s1
+  -> Size: 0GB
+[373/625] Checking: /work/vita/ahmad_rh/Autobot_ego_NScene:20000_regType:contrastive_CW:500_v2_0.5_ft_s1
+  -> Size: 0GB
+[374/625] Checking: /work/vita/younes
+  -> Size: 0GB
+[375/625] Checking: /work/vita/stgat
+  -> Size: 0GB
+[376/625] Checking: /work/vita/stgat/models
+  -> Size: 0GB
+[377/625] Checking: /work/vita/danya_inD
+  -> Size: 0GB
+[378/625] Checking: /work/vita/havolli_sequence
+  -> Size: 169GB
+  ✓ MATCH! Added to CSV
+[379/625] Checking: /work/vita/havolli_sequence/REC_IN_24_01_24_third
+  -> Size: 0GB
+[380/625] Checking: /work/vita/havolli_sequence/csv
+  -> Size: 0GB
+[381/625] Checking: /work/vita/havolli_sequence/REC_IN_24_01_24_fourth
+  -> Size: 0GB
+[382/625] Checking: /work/vita/havolli_sequence/Camera
+  -> Size: 0GB
+[383/625] Checking: /work/vita/havolli_sequence/24_01_24_night
+  -> Size: 0GB
+[384/625] Checking: /work/vita/havolli_sequence/up scripts
+  -> Size: 0GB
+[385/625] Checking: /work/vita/havolli_sequence/down scripts
+  -> Size: 0GB
+[386/625] Checking: /work/vita/havolli_sequence/REC_OUT_24_01_24_first
+  -> Size: 0GB
+[387/625] Checking: /work/vita/havolli_sequence/CamDown
+  -> Size: 0GB
+[388/625] Checking: /work/vita/havolli_sequence/REC_IN_24_01_24_first
+  -> Size: 0GB
+[389/625] Checking: /work/vita/havolli_sequence/LiDAR
+  -> Size: 0GB
+[390/625] Checking: /work/vita/havolli_sequence/REC_OUT_24_01_24_second
+  -> Size: 0GB
+[391/625] Checking: /work/vita/havolli_sequence/CamUp
+  -> Size: 0GB
+[392/625] Checking: /work/vita/havolli_sequence/REC_IN_24_01_24_second
+  -> Size: 0GB
+[393/625] Checking: /work/vita/danial
+  -> Size: 0GB
+[394/625] Checking: /work/vita/wuli
+  -> Size: 223GB
+  ✓ MATCH! Added to CSV
+[395/625] Checking: /work/vita/wuli/dev_UniTraj
+  -> Size: 0GB
+[396/625] Checking: /work/vita/wuli/data
+  -> Size: 223GB
+  ✓ MATCH! Added to CSV
+[397/625] Checking: /work/vita/wuli/exp
+  -> Size: 0GB
+[398/625] Checking: /work/vita/yasamAn
+  -> Skipped (timeout or error)
+[399/625] Checking: /work/vita/yasamAn/epfl_left_anonymized
+  -> Size: 2GB
+[400/625] Checking: /work/vita/yasamAn/depth
+  -> Size: 0GB
+[401/625] Checking: /work/vita/yasamAn/xl
+  -> Size: 10GB
+[402/625] Checking: /work/vita/yasamAn/Yassi
+  -> Size: 613GB
+  ✓ MATCH! Added to CSV
+[403/625] Checking: /work/vita/yasamAn/HumanML3D
+  -> Size: 0GB
+[404/625] Checking: /work/vita/yasamAn/cache
+  -> Size: 156GB
+  ✓ MATCH! Added to CSV
+[405/625] Checking: /work/vita/yasamAn/icml2025
+  -> Size: 0GB
+[406/625] Checking: /work/vita/yasamAn/l
+  -> Size: 6GB
+[407/625] Checking: /work/vita/yasamAn/OmniControlPositions
+  -> Size: 33GB
+[408/625] Checking: /work/vita/yasamAn/hard_left_anonymized
+  -> Size: 44GB
+[409/625] Checking: /work/vita/yasamAn/HumanML_global
+  -> Size: 14GB
+[410/625] Checking: /work/vita/yasamAn/HEADS_UP_RELEASE
+  -> Size: 190GB
+  ✓ MATCH! Added to CSV
+[411/625] Checking: /work/vita/ayromlou
+  -> Size: 0GB
+[412/625] Checking: /work/vita/out
+  -> Size: 0GB
+[413/625] Checking: /work/vita/out/2023-11-11_14-06-10_TRAIN
+  -> Size: 0GB
+[414/625] Checking: /work/vita/out/2023-11-11_06-12-07_TRAIN
+  -> Size: 0GB
+[415/625] Checking: /work/vita/out/2023-11-10_14-44-54_TRAIN
+  -> Size: 0GB
+[416/625] Checking: /work/vita/CelebAPCA
+  -> Size: 0GB
+[417/625] Checking: /work/vita/saeed
+  -> Size: 0GB
+[418/625] Checking: /work/vita/maxime
+  -> Size: 0GB
+[419/625] Checking: /work/vita/yuejiang
+  -> Size: 0GB
+[420/625] Checking: /work/vita/yuejiang/synth_v1
+  -> Size: 0GB
+[421/625] Checking: /work/vita/yuejiang/weak2strong
+  -> Size: 0GB
+[422/625] Checking: /work/vita/yuejiang/exp
+  -> Size: 0GB
+[423/625] Checking: /work/vita/rakhi
+  -> Size: 0GB
+[424/625] Checking: /work/vita/bastien
+  -> Skipped (timeout or error)
+[425/625] Checking: /work/vita/bastien/Brain
+  -> Size: 3GB
+[426/625] Checking: /work/vita/bastien/LayerSync
+  -> Size: 106GB
+  ✓ MATCH! Added to CSV
+[427/625] Checking: /work/vita/bastien/results_distil
+  -> Size: 14584GB
+  ✓ MATCH! Added to CSV
+[428/625] Checking: /work/vita/bastien/samples
+  -> Skipped (timeout or error)
+[429/625] Checking: /work/vita/bastien/DIRA_001_samples
+  -> Size: 103GB
+  ✓ MATCH! Added to CSV
+[430/625] Checking: /work/vita/bastien/cache
+  -> Size: 19GB
+[431/625] Checking: /work/vita/bastien/envs
+  -> Skipped (timeout or error)
+[432/625] Checking: /work/vita/bastien/DINOFUSION
+  -> Size: 284GB
+  ✓ MATCH! Added to CSV
+[433/625] Checking: /work/vita/bastien/code_template
+  -> Skipped (timeout or error)
+[434/625] Checking: /work/vita/bastien/results_old
+  -> Size: 0GB
+[435/625] Checking: /work/vita/bastien/samples_skip
+  -> Size: 0GB
+[436/625] Checking: /work/vita/bastien/old_server
+  -> Skipped (timeout or error)
+[437/625] Checking: /work/vita/bastien/Vanilla_samples
+  -> Size: 0GB
+[438/625] Checking: /work/vita/bastien/ffhq-dataset
+  -> Size: 0GB
+[439/625] Checking: /work/vita/bastien/results_CODE
+  -> Skipped (timeout or error)
+[440/625] Checking: /work/vita/brian
+  -> Size: 0GB
+[441/625] Checking: /work/vita/2024-02-28_01-34
+  -> Size: 0GB
+[442/625] Checking: /work/vita/Sinergia
+  -> Size: 0GB
+[443/625] Checking: /work/vita/ImagenetPCA
+  -> Size: 0GB
+[444/625] Checking: /work/vita/os
+  -> Size: 523GB
+  ✓ MATCH! Added to CSV
+[445/625] Checking: /work/vita/os/multi_modal
+  -> Size: 44GB
+[446/625] Checking: /work/vita/os/sjepa
+  -> Size: 0GB
+[447/625] Checking: /work/vita/os/json_for_test
+  -> Size: 0GB
+[448/625] Checking: /work/vita/os/output_dir
+  -> Size: 296GB
+  ✓ MATCH! Added to CSV
+[449/625] Checking: /work/vita/os/MB
+  -> Size: 2GB
+[450/625] Checking: /work/vita/os/nturgbd_rgb
+  -> Size: 0GB
+[451/625] Checking: /work/vita/os/TCL
+  -> Size: 0GB
+[452/625] Checking: /work/vita/os/exps
+  -> Size: 0GB
+[453/625] Checking: /work/vita/os/checkpoint
+  -> Size: 0GB
+[454/625] Checking: /work/vita/os/exps2
+  -> Size: 0GB
+[455/625] Checking: /work/vita/os/mb_orgr_pifpaf
+  -> Size: 4GB
+[456/625] Checking: /work/vita/os/MaskCLR-dev
+  -> Size: 0GB
+[457/625] Checking: /work/vita/os/rbd_project
+  -> Size: 3GB
+[458/625] Checking: /work/vita/os/SCD-Net
+  -> Size: 114GB
+  ✓ MATCH! Added to CSV
+[459/625] Checking: /work/vita/os/rbd-detection
+  -> Size: 32GB
+[460/625] Checking: /work/vita/os/skate
+  -> Size: 17GB
+[461/625] Checking: /work/vita/ood
+  -> Size: 0GB
+[462/625] Checking: /work/vita/nakka
+  -> Size: 0GB
+[463/625] Checking: /work/vita/nakka/StrongSORT-YOLO
+  -> Size: 0GB
+[464/625] Checking: /work/vita/nakka/June14
+  -> Size: 0GB
+[465/625] Checking: /work/vita/nakka/yolov8_tracking
+  -> Size: 0GB
+[466/625] Checking: /work/vita/nakka/yolov5
+  -> Size: 0GB
+[467/625] Checking: /work/vita/nakka/RobustTrajPred
+  -> Size: 0GB
+[468/625] Checking: /work/vita/nakka/TrackVis
+  -> Size: 0GB
+[469/625] Checking: /work/vita/nakka/datasets
+  -> Size: 0GB
+[470/625] Checking: /work/vita/nakka/openpifpaf
+  -> Size: 0GB
+[471/625] Checking: /work/vita/nakka/openpifpaf-copy
+  -> Size: 0GB
+[472/625] Checking: /work/vita/nakka/trajnetplusplusbaselines
+  -> Size: 0GB
+[473/625] Checking: /work/vita/nakka/Feb20
+  -> Size: 0GB
+[474/625] Checking: /work/vita/nakka/trained_models_Nov28_Charles
+  -> Size: 0GB
+[475/625] Checking: /work/vita/nakka/jobs
+  -> Size: 0GB
+[476/625] Checking: /work/vita/nakka/temp
+  -> Size: 0GB
+[477/625] Checking: /work/vita/nakka/Jifeng
+  -> Size: 0GB
+[478/625] Checking: /work/vita/nakka/pb-track
+  -> Size: 0GB
+[479/625] Checking: /work/vita/nakka/for_Krishna
+  -> Size: 0GB
+[480/625] Checking: /work/vita/nakka/YOLONEWv5
+  -> Size: 0GB
+[481/625] Checking: /work/vita/users
+  -> Size: 0GB
+[482/625] Checking: /work/vita/zimin
+  -> Skipped (timeout or error)
+[483/625] Checking: /work/vita/zimin/FG2
+  -> Size: 9GB
+[484/625] Checking: /work/vita/zimin/open_visloc_benchmark
+  -> Skipped (timeout or error)
+[485/625] Checking: /work/vita/zimin/CrossViewSLAM
+  -> Size: 492GB
+  ✓ MATCH! Added to CSV
+[486/625] Checking: /work/vita/zimin/CVM_3D
+  -> Size: 130GB
+  ✓ MATCH! Added to CSV
+[487/625] Checking: /work/vita/zimin/CCVPE
+  -> Size: 1GB
+[488/625] Checking: /work/vita/zimin/mmcv
+  -> Size: 0GB
+[489/625] Checking: /work/vita/zimin/UniK3D
+  -> Size: 0GB
+[490/625] Checking: /work/vita/zimin/pytorch3d
+  -> Size: 0GB
+[491/625] Checking: /work/vita/fan
+  -> Size: 0GB
+[492/625] Checking: /work/vita/fan/cache
+  -> Size: 0GB
+[493/625] Checking: /work/vita/fan/output_models
+  -> Size: 0GB
+[494/625] Checking: /work/vita/amsterdam
+  -> Size: 0GB
+[495/625] Checking: /work/vita/models_newVGG
+  -> Size: 0GB
+[496/625] Checking: /work/vita/pb-track
+  -> Size: 0GB
+[497/625] Checking: /work/vita/lorenzo
+  -> Size: 0GB
+[498/625] Checking: /work/vita/martorel
+  -> Size: 0GB
+[499/625] Checking: /work/vita/martorel/fog_contrast_ode_old
+  -> Size: 0GB
+[500/625] Checking: /work/vita/martorel/diffusion
+  -> Size: 0GB
+[501/625] Checking: /work/vita/aerial_map
+  -> Size: 0GB
+[502/625] Checking: /work/vita/lanfeng
+  -> Skipped (timeout or error)
+[503/625] Checking: /work/vita/lanfeng/mdsn
+  -> Size: 0GB
+[504/625] Checking: /work/vita/lanfeng/UniTraj_
+  -> Size: 0GB
+[505/625] Checking: /work/vita/lanfeng/semantic-segmentation
+  -> Size: 0GB
+[506/625] Checking: /work/vita/lanfeng/carla
+  -> Size: 43GB
+[507/625] Checking: /work/vita/lanfeng/iPad-
+  -> Size: 1GB
+[508/625] Checking: /work/vita/lanfeng/SEA
+  -> Size: 0GB
+[509/625] Checking: /work/vita/lanfeng/ViT-Adapter
+  -> Size: 0GB
+[510/625] Checking: /work/vita/lanfeng/cache
+  -> Skipped (timeout or error)
+[511/625] Checking: /work/vita/lanfeng/navsim_v1.1
+  -> Size: 5GB
+[512/625] Checking: /work/vita/lanfeng/dev_UniTraj
+  -> Size: 78GB
+[513/625] Checking: /work/vita/lanfeng/uniplan
+  -> Size: 0GB
+[514/625] Checking: /work/vita/lanfeng/DiffusionDrive
+  -> Size: 1046GB
+  ✓ MATCH! Added to CSV
+[515/625] Checking: /work/vita/lanfeng/dinov2
+  -> Size: 0GB
+[516/625] Checking: /work/vita/lanfeng/trak
+  -> Size: 0GB
+[517/625] Checking: /work/vita/lanfeng/video_script
+  -> Size: 0GB
+[518/625] Checking: /work/vita/lanfeng/TAROT
+  -> Size: 0GB
+[519/625] Checking: /work/vita/lanfeng/iPad
+  -> Skipped (timeout or error)
+[520/625] Checking: /work/vita/lanfeng/cosmos-transfer1
+  -> Size: 291GB
+  ✓ MATCH! Added to CSV
+[521/625] Checking: /work/vita/lanfeng/OpenScene
+  -> Size: 1GB
+[522/625] Checking: /work/vita/lanfeng/dlav-2025-project-staff
+  -> Size: 0GB
+[523/625] Checking: /work/vita/lanfeng/awesome-semantic-segmentation-pytorch
+  -> Size: 243GB
+  ✓ MATCH! Added to CSV
+[524/625] Checking: /work/vita/lanfeng/token
+  -> Size: 0GB
+[525/625] Checking: /work/vita/lanfeng/fast_jl-0.1.3
+  -> Size: 0GB
+[526/625] Checking: /work/vita/lanfeng/navsim
+  -> Skipped (timeout or error)
+[527/625] Checking: /work/vita/lanfeng/.cache
+  -> Size: 1GB
+[528/625] Checking: /work/vita/lanfeng/UniTraj_public
+  -> Size: 0GB
+[529/625] Checking: /work/vita/argo_code
+  -> Size: 0GB
+[530/625] Checking: /work/vita/amene
+  -> Size: 0GB
+[531/625] Checking: /work/vita/amene/entire_clip
+  -> Size: 0GB
+[532/625] Checking: /work/vita/amene/near_peak
+  -> Size: 0GB
+[533/625] Checking: /work/vita/kitti
+  -> Size: 0GB
+[534/625] Checking: /work/vita/kitti/3dop
+  -> Size: 0GB
+[535/625] Checking: /work/vita/kitti/m3d
+  -> Size: 0GB
+[536/625] Checking: /work/vita/kitti/pseudo-lidar
+  -> Size: 0GB
+[537/625] Checking: /work/vita/kitti/monoloco_pp
+  -> Size: 0GB
+[538/625] Checking: /work/vita/kitti/monstereo
+  -> Size: 0GB
+[539/625] Checking: /work/vita/kitti/monogrnet
+  -> Size: 0GB
+[540/625] Checking: /work/vita/kitti/monodis
+  -> Size: 0GB
+[541/625] Checking: /work/vita/kitti/testing
+  -> Size: 0GB
+[542/625] Checking: /work/vita/kitti/smoke
+  -> Size: 0GB
+[543/625] Checking: /work/vita/kitti/training
+  -> Size: 0GB
+[544/625] Checking: /work/vita/arasekh
+  -> Size: 0GB
+[545/625] Checking: /work/vita/ting
+  -> Size: 0GB
+[546/625] Checking: /work/vita/llm
+  -> Size: 0GB
+[547/625] Checking: /work/vita/llm/llama
+  -> Size: 0GB
+[548/625] Checking: /work/vita/.afm
+  -> Size: 0GB
+[549/625] Checking: /work/vita/Cifar10_ICML
+  -> Size: 1GB
+[550/625] Checking: /work/vita/openpifpaf_env
+  -> Size: 0GB
+[551/625] Checking: /work/vita/openpifpaf_env/include
+  -> Size: 0GB
+[552/625] Checking: /work/vita/openpifpaf_env/bin
+  -> Size: 0GB
+[553/625] Checking: /work/vita/openpifpaf_env/etc
+  -> Size: 0GB
+[554/625] Checking: /work/vita/openpifpaf_env/lib
+  -> Size: 0GB
+[555/625] Checking: /work/vita/openpifpaf_env/share
+  -> Size: 0GB
+[556/625] Checking: /work/vita/parham
+  -> Size: 0GB
+[557/625] Checking: /work/vita/frano
+  -> Size: 1GB
+[558/625] Checking: /work/vita/new_360SD-Net
+  -> Size: 0GB
+[559/625] Checking: /work/vita/new_360SD-Net/output
+  -> Size: 0GB
+[560/625] Checking: /work/vita/new_360SD-Net/dataset
+  -> Size: 0GB
+[561/625] Checking: /work/vita/new_360SD-Net/models
+  -> Size: 0GB
+[562/625] Checking: /work/vita/new_360SD-Net/dataloader
+  -> Size: 0GB
+[563/625] Checking: /work/vita/new_360SD-Net/conda_env
+  -> Size: 0GB
+[564/625] Checking: /work/vita/new_360SD-Net/Logs_all
+  -> Size: 0GB
+[565/625] Checking: /work/vita/new_360SD-Net/dataset_test
+  -> Size: 0GB
+[566/625] Checking: /work/vita/new_360SD-Net/checkpoints
+  -> Size: 0GB
+[567/625] Checking: /work/vita/tavasoli
+  -> Size: 74GB
+[568/625] Checking: /work/vita/tavasoli/easy_left_anonymized
+  -> Size: 26GB
+[569/625] Checking: /work/vita/tavasoli/unconstrained_left_anonymized
+  -> Size: 19GB
+[570/625] Checking: /work/vita/tavasoli/hard_left_anonymized
+  -> Size: 24GB
+[571/625] Checking: /work/vita/nadiahadjmbarek
+  -> Size: 0GB
+[572/625] Checking: /work/vita/nadiahadjmbarek/ScalableViT
+  -> Size: 0GB
+[573/625] Checking: /work/vita/nadiahadjmbarek/crossvit
+  -> Size: 0GB
+[574/625] Checking: /work/vita/nadiahadjmbarek/inference
+  -> Size: 0GB
+[575/625] Checking: /work/vita/nadiahadjmbarek/STrajNet
+  -> Size: 0GB
+[576/625] Checking: /work/vita/nadiahadjmbarek/STrajNet_early_fusion
+  -> Size: 0GB
+[577/625] Checking: /work/vita/nadiahadjmbarek/STrajNet_late_fusion
+  -> Size: 0GB
+[578/625] Checking: /work/vita/nadiahadjmbarek/crossformer
+  -> Size: 0GB
+[579/625] Checking: /work/vita/nadiahadjmbarek/.git
+  -> Size: 0GB
+[580/625] Checking: /work/vita/jifwang
+  -> Size: 0GB
+[581/625] Checking: /work/vita/ImagenetTrajectories
+  -> Size: 75GB
+[582/625] Checking: /work/vita/luan
+  -> Skipped (timeout or error)
+[583/625] Checking: /work/vita/luan/trajnet++
+  -> Size: 0GB
+[584/625] Checking: /work/vita/luan/synth_v1_breaked
+  -> Size: 0GB
+[585/625] Checking: /work/vita/luan/end2end_traj_pred
+  -> Size: 3GB
+[586/625] Checking: /work/vita/luan/end2end_traj_pred_part2
+  -> Size: 7GB
+[587/625] Checking: /work/vita/luan/track_free
+  -> Skipped (timeout or error)
+[588/625] Checking: /work/vita/luan/processed_6
+  -> Size: 1GB
+[589/625] Checking: /work/vita/luan/SocialVAE
+  -> Size: 0GB
+[590/625] Checking: /work/vita/luan/tracking
+  -> Size: 0GB
+[591/625] Checking: /work/vita/luan/Human-Path-Prediction
+  -> Size: 1GB
+[592/625] Checking: /work/vita/luan/SocialCausality_final_final
+  -> Size: 11GB
+[593/625] Checking: /work/vita/luan/nuscenes-devkit
+  -> Size: 0GB
+[594/625] Checking: /work/vita/luan/multi-transmotion_orginal
+  -> Skipped (timeout or error)
+[595/625] Checking: /work/vita/luan/multi-transmotion
+  -> Skipped (timeout or error)
+[596/625] Checking: /work/vita/mariam
+  -> Skipped (timeout or error)
+[597/625] Checking: /work/vita/mariam/include
+  -> Size: 0GB
+[598/625] Checking: /work/vita/mariam/miniconda3_pkg
+  -> Size: 0GB
+[599/625] Checking: /work/vita/mariam/man
+  -> Size: 0GB
+[600/625] Checking: /work/vita/mariam/bin
+  -> Size: 0GB
+[601/625] Checking: /work/vita/mariam/pkgs
+  -> Skipped (timeout or error)
+[602/625] Checking: /work/vita/mariam/envs
+  -> Skipped (timeout or error)
+[603/625] Checking: /work/vita/mariam/h5
+  -> Size: 22GB
+[604/625] Checking: /work/vita/mariam/etc
+  -> Size: 0GB
+[605/625] Checking: /work/vita/mariam/cmake
+  -> Size: 0GB
+[606/625] Checking: /work/vita/mariam/ssl
+  -> Size: 0GB
+[607/625] Checking: /work/vita/mariam/taming-transformers
+  -> Size: 0GB
+[608/625] Checking: /work/vita/mariam/x86_64-conda-linux-gnu
+  -> Size: 0GB
+[609/625] Checking: /work/vita/mariam/condabin
+  -> Size: 0GB
+[610/625] Checking: /work/vita/mariam/lib
+  -> Size: 0GB
+[611/625] Checking: /work/vita/mariam/compiler_compat
+  -> Size: 0GB
+[612/625] Checking: /work/vita/mariam/miniconda3
+  -> Size: 0GB
+[613/625] Checking: /work/vita/mariam/share
+  -> Size: 0GB
+[614/625] Checking: /work/vita/mariam/x86_64-conda_cos7-linux-gnu
+  -> Size: 0GB
+[615/625] Checking: /work/vita/mariam/shell
+  -> Size: 0GB
+[616/625] Checking: /work/vita/mariam/cosmos_videos
+  -> Size: 2GB
+[617/625] Checking: /work/vita/mariam/conda-meta
+  -> Size: 0GB
+[618/625] Checking: /work/vita/mariam/sbin
+  -> Size: 0GB
+[619/625] Checking: /work/vita/tetsuo
+  -> Size: 0GB
+[620/625] Checking: /work/vita/mshahver
+  -> Size: 0GB
+[621/625] Checking: /work/vita/alefevre
+  -> Skipped (timeout or error)
+[622/625] Checking: /work/vita/alefevre/imagenet_cache
+  -> Size: 860GB
+  ✓ MATCH! Added to CSV
+[623/625] Checking: /work/vita/alefevre/programs
+  -> Skipped (timeout or error)
+[624/625] Checking: /work/vita/saneian
+  -> Size: 0GB
+[625/625] Checking: /work/vita/.snapshots
+  -> Size: 0GB
+Scan finished (checked 625 directories)
+Results logged to: ./expired_files.csv
