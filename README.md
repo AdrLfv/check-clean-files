@@ -1,6 +1,6 @@
 # Check Clean Files
 
-Shell utilities for scanning storage on the Vita cluster and logging directories that exceed a size or age threshold. The primary entry point is `check_files.sh`, which walks the configured base directories, computes directory sizes, and writes the results to CSV for later review.
+Shell utilities for scanning storage and logging directories that exceed a size or age threshold. The primary entry point is `check_files.sh`, which walks the configured base directories, computes directory sizes, and writes the results to CSV for later review.
 
 ## Requirements
 
