@@ -4,6 +4,7 @@
 expired_only=false
 min_size_gb=0
 timeout_seconds=1200
+resume=false
 BASE_DIRS=(
     "/work/vita/"
 )
@@ -49,7 +50,10 @@ while [ $# -gt 0 ]; do
             LOG_BASENAME="$2"
             shift
             ;;
-        *) echo "Usage: $0 [-e] [-m min_size_gb] [-t timeout_seconds] [-b base_dir[,base_dir...]] [-o output_csv_basename]" >&2; exit 1 ;;
+        --resume)
+            resume=true
+            ;;
+        *) echo "Usage: $0 [--resume] [-e] [-m min_size_gb] [-t timeout_seconds] [-b base_dir[,base_dir...]] [-o output_csv_basename]" >&2; exit 1 ;;
     esac
     shift
 done
@@ -76,6 +80,18 @@ else
     LOG_FILES+=("$OUTPUT_DIR/${log_stem}${log_ext}")
 fi
 
+RESUME_DIRS=()
+if [ "$resume" = true ]; then
+    for log_file in "${LOG_FILES[@]}"; do
+        if [ -f "$log_file" ]; then
+            last_dir=$(awk -F',' 'NR>1 && NF {last=$1} END {gsub(/^"|"$/, "", last); print last}' "$log_file")
+            RESUME_DIRS+=("$last_dir")
+        else
+            RESUME_DIRS+=("")
+        fi
+    done
+fi
+
 echo "Options parsed: expired_only=$expired_only, min_size_gb=$min_size_gb, timeout_seconds=$timeout_seconds, base_dirs=${BASE_DIRS[*]}, output_dir=$OUTPUT_DIR, log_basename=$LOG_BASENAME"
 EXPIRATION_DAYS=365
 MAX_DEPTH=2
@@ -99,10 +115,15 @@ is_excluded_dir() {
 log_expired_dirs_with_size() {
     local base_dir="$1"
     local log_file="$2"
+    local resume_after="${3:-}"
     local min_size_bytes=$((min_size_gb * 1024 * 1024 * 1024))
 
     echo "Entering function: base_dir=$base_dir, log_file=$log_file"
-    echo '"Directory","Size"' > "$log_file"
+    if [ "$resume" = true ] && [ -s "$log_file" ]; then
+        echo "Resume mode: appending to existing log $log_file" >&2
+    else
+        echo '"Directory","Size"' > "$log_file"
+    fi
     echo "Scanning $base_dir (expired_only=$expired_only, min_size_gb=$min_size_gb) ..."
     
     # Get list of directories to check
@@ -115,10 +136,45 @@ log_expired_dirs_with_size() {
         mapfile -t dirs_to_check < <(find "$base_dir" -mindepth 1 -maxdepth "$MAX_DEPTH" -type d 2>/dev/null)
     fi
     
-    echo "Found ${#dirs_to_check[@]} directories to check"
-    
+    local total_dirs=${#dirs_to_check[@]}
+    echo "Found ${total_dirs} directories to check"
+
+    local resume_enabled=false
+    local resume_index=-1
+    local skipped_due_resume=0
+    if [ -n "$resume_after" ]; then
+        for idx in "${!dirs_to_check[@]}"; do
+            candidate="${dirs_to_check[$idx]}"
+            if [[ "$candidate" == "$resume_after" ]]; then
+                resume_enabled=true
+                resume_index=$idx
+                break
+            fi
+        done
+
+        if [ "$resume_enabled" = true ]; then
+            skipped_due_resume=$((resume_index + 1))
+            local remaining_after_resume=$((total_dirs - skipped_due_resume))
+            echo "Resume enabled for $log_file: skipping up to '$resume_after' (skipping $skipped_due_resume dirs, $remaining_after_resume remaining)" >&2
+        else
+            echo "Resume requested but '$resume_after' not found under $base_dir; processing from start" >&2
+        fi
+    fi
+
+    local skip_until_resume=false
+    if [ "$resume_enabled" = true ]; then
+        skip_until_resume=true
+    fi
+
     local count=0
     for dir in "${dirs_to_check[@]}"; do
+        if [ "$skip_until_resume" = true ]; then
+            if [[ "$dir" == "$resume_after" ]]; then
+                skip_until_resume=false
+                echo "Resume marker reached for $log_file: $dir" >&2
+            fi
+            continue
+        fi
         count=$((count+1))
         
         # Log every directory being checked
@@ -139,14 +195,20 @@ log_expired_dirs_with_size() {
             if [ "$size_bytes" -ge "$min_size_bytes" ]; then
                 local size_human=$(numfmt --to=iec --suffix=B "$size_bytes" 2>/dev/null || echo "${size_bytes}B")
                 printf '"%s","%s"\n' "$dir" "$size_human" >> "$log_file"
-                echo "  ✓ MATCH! Added to CSV" >&2
+                echo "  MATCH! Added to CSV" >&2
             fi
         else
             echo "  -> Skipped (timeout or error)" >&2
         fi
     done
     
-    echo "Scan finished (checked $count directories)"
+    local processed_dirs=$count
+    local remaining_after_resume=$((total_dirs - skipped_due_resume))
+    if [ "$resume_enabled" = true ]; then
+        echo "Resume summary: skipped $skipped_due_resume, processed $processed_dirs of $remaining_after_resume remaining directories" >&2
+    fi
+
+    echo "Scan finished (checked $processed_dirs directories; total candidates $total_dirs)"
     echo "Results logged to: $log_file"
 }
 
@@ -155,5 +217,9 @@ echo "Before for loop"
 echo "BASE_DIRS count=${#BASE_DIRS[@]} values=${BASE_DIRS[*]}"
 echo "LOG_FILES count=${#LOG_FILES[@]} values=${LOG_FILES[*]}"
 for i in "${!BASE_DIRS[@]}"; do
-    log_expired_dirs_with_size "${BASE_DIRS[$i]}" "${LOG_FILES[$i]}"
+    resume_arg=""
+    if [ "$resume" = true ]; then
+        resume_arg="${RESUME_DIRS[$i]}"
+    fi
+    log_expired_dirs_with_size "${BASE_DIRS[$i]}" "${LOG_FILES[$i]}" "$resume_arg"
 done
