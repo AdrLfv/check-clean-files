@@ -1,8 +1,16 @@
 #!/bin/bash
+#SBATCH --time=48:00:00
+#SBATCH --job-name=check_files
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=8
+#SBATCH --partition=standard
+#SBATCH --output=/work/vita/alefevre/programs/check-clean-files/logs/checking/%j.out
+#SBATCH --error=/work/vita/alefevre/programs/check-clean-files/logs/checking/%j.err
+
 
 # Default values
 expired_only=false
-min_size_gb=0
+min_size_gb=50
 timeout_seconds=1200
 resume=false
 BASE_DIRS=(
@@ -98,7 +106,6 @@ MAX_DEPTH=2
 # Directories to skip measuring (their subfolders will still be measured)
 EXCLUDED_DIRS=(
     "/work/vita/datasets"
-    "/work/vita/rjiang"
 )
 
 is_excluded_dir() {
@@ -122,7 +129,7 @@ log_expired_dirs_with_size() {
     if [ "$resume" = true ] && [ -s "$log_file" ]; then
         echo "Resume mode: appending to existing log $log_file" >&2
     else
-        echo '"Directory","Size"' > "$log_file"
+        echo '"Directory","Size","Modified","Accessed"' > "$log_file"
     fi
     echo "Scanning $base_dir (expired_only=$expired_only, min_size_gb=$min_size_gb) ..."
     
@@ -166,6 +173,7 @@ log_expired_dirs_with_size() {
         skip_until_resume=true
     fi
 
+    declare -A processed_dirs
     local count=0
     for dir in "${dirs_to_check[@]}"; do
         if [ "$skip_until_resume" = true ]; then
@@ -175,6 +183,12 @@ log_expired_dirs_with_size() {
             fi
             continue
         fi
+        
+        if [ "${processed_dirs[$dir]}" = "1" ]; then
+            echo "Skipping $dir (already processed as subfolder)" >&2
+            continue
+        fi
+        
         count=$((count+1))
         
         # Log every directory being checked
@@ -185,6 +199,8 @@ log_expired_dirs_with_size() {
             continue
         fi
         
+        processed_dirs[$dir]=1
+        
         # Quick size check with du -s (timeout after $timeout_seconds seconds)
         local size_bytes=$(timeout "$timeout_seconds" du -s -B1 "$dir" 2>/dev/null | awk '{print $1}')
         
@@ -194,11 +210,54 @@ log_expired_dirs_with_size() {
             
             if [ "$size_bytes" -ge "$min_size_bytes" ]; then
                 local size_human=$(numfmt --to=iec --suffix=B "$size_bytes" 2>/dev/null || echo "${size_bytes}B")
-                printf '"%s","%s"\n' "$dir" "$size_human" >> "$log_file"
+                local modified_date=$(stat -c %y "$dir" 2>/dev/null)
+                local accessed_date=$(stat -c %x "$dir" 2>/dev/null)
+                modified_date=${modified_date:-unknown}
+                accessed_date=${accessed_date:-unknown}
+                printf '"%s","%s","%s","%s"\n' "$dir" "$size_human" "$modified_date" "$accessed_date" >> "$log_file"
                 echo "  MATCH! Added to CSV" >&2
             fi
         else
-            echo "  -> Skipped (timeout or error)" >&2
+            echo "  -> Timeout/error, logging as TOO_LARGE and checking subfolders" >&2
+            local modified_date=$(stat -c %y "$dir" 2>/dev/null)
+            local accessed_date=$(stat -c %x "$dir" 2>/dev/null)
+            modified_date=${modified_date:-unknown}
+            accessed_date=${accessed_date:-unknown}
+            printf '"%s","%s","%s","%s"\n' "$dir" "TOO_LARGE" "$modified_date" "$accessed_date" >> "$log_file"
+            
+            # Try to check immediate subfolders
+            local subdirs=()
+            mapfile -t subdirs < <(find "$dir" -mindepth 1 -maxdepth 1 -type d 2>/dev/null)
+            if [ ${#subdirs[@]} -gt 0 ]; then
+                echo "  -> Found ${#subdirs[@]} subfolders, checking each..." >&2
+                for subdir in "${subdirs[@]}"; do
+                    processed_dirs[$subdir]=1
+                    echo "  -> Checking subfolder: $subdir" >&2
+                    local sub_size_bytes=$(timeout "$timeout_seconds" du -s -B1 "$subdir" 2>/dev/null | awk '{print $1}')
+                    
+                    if [ -n "$sub_size_bytes" ]; then
+                        local sub_size_gb=$((sub_size_bytes / 1024 / 1024 / 1024))
+                        echo "     -> Size: ${sub_size_gb}GB" >&2
+                        
+                        if [ "$sub_size_bytes" -ge "$min_size_bytes" ]; then
+                            local sub_size_human=$(numfmt --to=iec --suffix=B "$sub_size_bytes" 2>/dev/null || echo "${sub_size_bytes}B")
+                            local sub_modified_date=$(stat -c %y "$subdir" 2>/dev/null)
+                            local sub_accessed_date=$(stat -c %x "$subdir" 2>/dev/null)
+                            sub_modified_date=${sub_modified_date:-unknown}
+                            sub_accessed_date=${sub_accessed_date:-unknown}
+                            printf '"%s","%s","%s","%s"\n' "$subdir" "$sub_size_human" "$sub_modified_date" "$sub_accessed_date" >> "$log_file"
+                            echo "     MATCH! Added to CSV" >&2
+                        fi
+                    else
+                        echo "     -> Timeout/error on subfolder, logging as TOO_LARGE" >&2
+                        local sub_modified_date=$(stat -c %y "$subdir" 2>/dev/null)
+                        local sub_accessed_date=$(stat -c %x "$subdir" 2>/dev/null)
+                        sub_modified_date=${sub_modified_date:-unknown}
+                        sub_accessed_date=${sub_accessed_date:-unknown}
+                        printf '"%s","%s","%s","%s"\n' "$subdir" "TOO_LARGE" "$sub_modified_date" "$sub_accessed_date" >> "$log_file"
+                    fi
+                done
+            fi
         fi
     done
     

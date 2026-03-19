@@ -28,13 +28,13 @@ bash check_files.sh [OPTIONS]
 ### Output
 
 - Results are written to `./output/<basename>.csv`. When multiple base directories are specified, numbered suffixes are appended.
-- CSV columns: `Directory`, `Size` (human-readable IEC units).
+- CSV columns: `Directory`, `Size` (human-readable IEC units), `Modified`, `Accessed`.
 - Progress information, matches, and resume statistics are printed to `stderr` so you can monitor the run without polluting the CSV.
 
 ### Example
 
 ```bash
-bash check_files.sh -m 100 -t 1200 -b /work/vita/ -o scitas_storage.csv --resume
+bash check_files.sh -m 50 -t 1200 -b /work/vita/ -o scitas_storage.csv --resume
 ```
 
 This scans `/work/vita/` for directories larger than 100 GB, resumes from the last recorded directory in `./output/scitas_storage.csv`, and times out individual `du` commands after 1200 seconds.
